@@ -78,6 +78,9 @@ class _LoginPageState extends State<LoginPage> {
                               builder: (BuildContext context) =>
                               const MainScreen()));
                         }
+                        else if(otpController.text.isEmpty){
+                          CustomWidgets().snakbar("Please Enter OTP", context);
+                        }
                         else{
                           CustomWidgets().snakbar("Invalid OTP Entered", context);
                         }
